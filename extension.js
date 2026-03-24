@@ -1,17 +1,13 @@
-// extension.js (ONLY orchestration)
-
 import * as vscode from 'vscode';
+import { startOrchestration } from './src/V5/orchestration/startOrchestration.js';
 
-const CURRENT_VERSION = 'V3';
+export function activate(context) {
+	const disposable = vscode.commands.registerCommand('extension.initJs', (uri) => {
+		console.log("COMMAND TRIGGERED");
+		startOrchestration(uri, context.extensionPath);
+	});
 
-export async function activate(context) {
-	const modulePath = new URL(`./src/${CURRENT_VERSION}/orchestration/startOrchestration.js`, import.meta.url);
-
-	const module = await import(modulePath);
-
-	context.subscriptions.push(
-		vscode.commands.registerCommand('extension.initJs', module.startOrchestration)
-	);
+	context.subscriptions.push(disposable);
 };
 
-export function deactivate() { }
+export function deactivate() { };

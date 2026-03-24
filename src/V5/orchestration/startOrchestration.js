@@ -1,29 +1,37 @@
-// src/V3/orchestration/startOrchestration.js
+// src/V5/orchestration/startOrchestration.js;
 
 import { resolveContext } from '../utils/context.js';
 import { ensureFolder } from '../services/folderService.js';
-import { createStructure } from '../services/createStructure.js';
-import { projectTemplate } from '../templates/projectTemplate.js';
 import { finalize, fail } from '../utils/response.js';
 import { updateHtmlFile } from '../services/updateHtml.js';
+import { copyTemplate } from '../services/copyTemplate.js';
+import { fileURLToPath } from 'url';
 
-export async function startOrchestration(uri) {
+import path from 'path';
+
+export async function startOrchestration(uri, extensionPath) {
     try {
         const context = resolveContext(uri);
 
         const folderPath = ensureFolder(context);
 
-        const files = projectTemplate();
+        const templatePath = fileURLToPath(
+            new URL('../templates/Base', import.meta.url)
+        );
 
-        createStructure({ folderPath, files });
-
-        finalize({ folderPath });
+        copyTemplate({
+            templatePath,
+            targetPath: folderPath
+        });
 
         updateHtmlFile({
             filePath: context.fullPath,
             folderName: context.folderName
         });
+
+        finalize({ folderPath });
+
     } catch (error) {
         fail(error);
-    }
+    };
 };
