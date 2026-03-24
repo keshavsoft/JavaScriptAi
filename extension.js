@@ -1,6 +1,6 @@
 import * as vscode from 'vscode';
-import { startOrchestration } from './src/V6/InitJs/orchestration/startOrchestration.js';
-import { startOrchestration as AddListeners } from './src/V6/AddListeners/orchestration/startOrchestration.js';
+import { startOrchestration } from './src/V7/InitJs/orchestration/startOrchestration.js';
+import { startOrchestration as AddListeners } from './src/V7/AddListeners/orchestration/startOrchestration.js';
 
 export function activate(context) {
 	const disposable = vscode.commands.registerCommand('extension.initJs', (uri) => {
