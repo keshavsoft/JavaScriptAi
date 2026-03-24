@@ -35,6 +35,10 @@
       {
         "command": "extension.addListeners",
         "title": "Initiate addListeners"
+      },
+      {
+        "command": "extension.addBusiness",
+        "title": "Initiate addBusiness"
       }
     ],
     "menus": {
@@ -47,12 +51,17 @@
         {
           "command": "extension.initJs",
           "when": "resourceExtname == .html",
-          "group": "navigation@1"
+          "group": "navigation@2"
         },
         {
           "command": "extension.addListeners",
           "when": "resourceExtname == .html",
-          "group": "navigation@1"
+          "group": "navigation@3"
+        },
+        {
+          "command": "extension.addBusiness",
+          "when": "resourceExtname == .html",
+          "group": "navigation@4"
         }
       ]
     }
