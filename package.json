@@ -20,8 +20,7 @@
     "type": "git",
     "url": "https://github.com/keshavsoft/keshavai.git"
   },
-  "activationEvents": [
-  ],
+  "activationEvents": [],
   "main": "./extension.js",
   "contributes": {
     "commands": [
@@ -32,6 +31,10 @@
       {
         "command": "extension.initJs",
         "title": "Initiate JS"
+      },
+      {
+        "command": "extension.addListeners",
+        "title": "Initiate addListeners"
       }
     ],
     "menus": {
@@ -43,6 +46,11 @@
         },
         {
           "command": "extension.initJs",
+          "when": "resourceExtname == .html",
+          "group": "navigation@1"
+        },
+        {
+          "command": "extension.addListeners",
           "when": "resourceExtname == .html",
           "group": "navigation@1"
         }
