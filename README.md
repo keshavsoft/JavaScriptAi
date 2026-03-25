@@ -1,186 +1,118 @@
-# 🚀 AI Schema Generator (VS Code Extension)
+# JavaScriptAI VS Code Extension
 
-Instantly generate a structured backend project and APIs directly inside VS Code.
+## Overview
 
----
+**JavaScriptAI** is a Visual Studio Code extension developed by **KeshavSoft** that helps automate JavaScript setup, event listener creation, and business logic injection directly from the Explorer context menu.
 
-## 📌 What is this?
+* Version: 1.2.7
+* Engine: VS Code ^1.109.0
+* Module Type: ES Modules
+* Supports untrusted workspaces
 
-**AI Schema Generator** is a VS Code extension that helps you:
+## Features
 
-* Generate a complete backend project structure
-* Auto-create folders, config, and base files
-* Build APIs from schema instantly
-* Run and test your project in seconds
+* Initialize JavaScript structure in HTML projects
+* Automatically add event listeners
+* Inject business logic using user input
+* Context menu integration for quick access
+* Modular orchestration-based architecture
 
----
+## Commands
 
-## ⚡ Features
+| Command                | Title                 | Description                      |
+| ---------------------- | --------------------- | -------------------------------- |
+| extension.build        | Build                 | Available on folders             |
+| extension.initJs       | Initiate JS           | Initializes JavaScript setup     |
+| extension.addListeners | Initiate addListeners | Adds event listeners             |
+| extension.addBusiness  | Initiate addBusiness  | Adds business logic with HTML ID |
 
-### 1. One-click Schema Creation
+## Context Menu Integration
 
-* Creates project structure automatically:
+Commands appear in Explorer based on conditions:
 
-  ```
-  Config/
-  Data/
-  ForFrontEnd/
-  V1/
-  ```
+* On folders:
 
-* Generates essential files:
+  * Build
+* On `.html` files:
 
-  * `.env`
-  * `.env.local`
-  * `app.js`
-  * `package.json`
+  * Initiate JS
+  * Initiate addListeners
+  * Initiate addBusiness
 
----
+## Project Structure
 
-### 2. API Builder
+```
+src/
+ └── V9/
+     ├── InitJs/
+     ├── AddListeners/
+     └── AddBusiness/
+```
 
-* Converts generated schema into working APIs
-* Ready-to-run Node.js backend
+## How It Works
 
----
+* Commands are registered using `vscode.commands.registerCommand`
+* Each command triggers a specific orchestration module
+* Shared parameter: `context.extensionPath`
+* `addBusiness` collects user input via input box (HTML ID)
 
-### 3. Integrated Workflow
+## Installation
 
-Everything happens inside VS Code:
+1. Clone the repository:
 
-* No manual setup
-* No boilerplate writing
-* No folder creation
-
----
-
-## 🧠 How It Works
-
-1. Open Command Palette
-
+   ```bash
+   git clone https://github.com/keshavsoft/keshavai.git
    ```
-   Ctrl + Shift + P
+2. Install dependencies:
+
+   ```bash
+   npm install
    ```
+3. Run the extension:
 
-2. Run:
+   * Press `F5` in VS Code
 
-   ```
-   ext openUI
-   ```
+## Usage
 
-3. Click:
+1. Open a project in VS Code
+2. Right-click on:
 
-   * ✅ **Create Schema**
-   * ✅ **Build API**
+   * Folder → Build
+   * HTML file → Select desired command
+3. Follow prompts if required (e.g., HTML ID)
 
----
+## Scripts
 
-## ▶️ Running the Project
+* `npm run lint` → Run ESLint
+* `npm test` → Run VS Code extension tests
 
-After schema generation:
+## Development Stack
 
-```bash
-npm install
-npm run start
-```
+* JavaScript (ES Modules)
+* VS Code Extension API
+* ESLint for linting
+* PostCSS + Tailwind CLI (dev dependencies)
 
-Output:
+## Activation
 
-```
-Example app listening on port 3000
-http://localhost:3000
-```
+* No explicit activation events
+* Activated when commands are invoked
 
----
+## Deactivation
 
-## 📁 Generated Structure
+The extension exposes a `deactivate` function for cleanup.
 
-```
-project-root/
-│
-├── Config/
-├── Data/
-├── ForFrontEnd/
-├── V1/
-│
-├── .env
-├── .env.local
-├── app.js
-├── package.json
-```
+## Future Improvements
 
----
+* Add error handling
+* Improve logging and debugging
+* Add UI feedback (notifications)
+* Expand orchestration modules
 
-## 🎯 Design Philosophy
+## Repository
 
-This tool is built on:
+[https://github.com/keshavsoft/keshavai.git](https://github.com/keshavsoft/keshavai.git)
 
-* **Orchestration over complexity**
-* **Zero manual setup**
-* **Fast backend bootstrapping**
+## License
 
----
-
-## ⚠️ Current Scope
-
-To keep things simple and fast:
-
-* Only essential schema generation is supported
-* Limited UI interactions
-* Focus is on speed, not customization
-
----
-
-## 🚧 Known Limitations
-
-* Column-level customization is minimal
-* Some endpoints (GET/POST variants) may be limited
-* No schema editor UI yet
-
----
-
-## 🔮 Future Improvements (Optional)
-
-* Schema editor inside UI
-* API preview panel
-* Progress indicators
-* Selective rebuild
-
----
-
-## 👨‍💻 Developer Notes
-
-* Built as a VS Code Extension
-* Uses Webview for UI
-* Node.js backend generation
-* File system driven architecture
-
----
-
-## ✅ Why This Exists
-
-To eliminate:
-
-* Repetitive project setup
-* Boilerplate coding
-* Manual folder structuring
-
-And replace it with:
-
-> ⚡ One-click backend generation
-
----
-
-## 🏁 Summary
-
-If you want to:
-
-* Start backend projects instantly
-* Avoid setup overhead
-* Focus on actual logic
-
-This tool gives you a **ready-to-run foundation in seconds.**
-
----
-
-**Built with focus on simplicity and speed.**
+Refer to `license.txt` for details.

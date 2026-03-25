@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
-import { startOrchestration } from './src/V8/InitJs/orchestration/startOrchestration.js';
-import { startOrchestration as AddListeners } from './src/V8/AddListeners/orchestration/startOrchestration.js';
-import { startOrchestration as AddBusiness } from './src/V8/AddBusiness/orchestration/startOrchestration.js';
+import { startOrchestration } from './src/V10/InitJs/orchestration/startOrchestration.js';
+import { startOrchestration as AddListeners } from './src/V10/AddListeners/orchestration/startOrchestration.js';
+import { startOrchestration as AddBusiness } from './src/V10/AddBusiness/orchestration/startOrchestration.js';
 
 export function activate(context) {
 	const disposable = vscode.commands.registerCommand('extension.initJs', (uri) => {
