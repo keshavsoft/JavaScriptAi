@@ -59,3 +59,7 @@ All notable changes to this extension are documented here.
 ## [1.12.1]
 
 ### ✅ FetchAsGet perfect
+
+## [1.13.1]
+
+### ✅ FetchAsGet as fetchCommand from user
