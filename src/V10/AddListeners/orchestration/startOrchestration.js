@@ -9,7 +9,7 @@ import { updateRunAfterDomLoad } from '../services/updateRunAfterDomLoad.js';
 
 import { fileURLToPath } from 'url';
 
-export async function startOrchestration(uri, extensionPath) {
+export async function startOrchestration({ uri, extensionPath }) {
     try {
         const context = resolveContext(uri);
 
@@ -40,7 +40,6 @@ export async function startOrchestration(uri, extensionPath) {
         updateRunAfterDomLoad({ targetExactPath: targetExactPath });
 
         finalize({ folderPath });
-
     } catch (error) {
         fail(error);
     };

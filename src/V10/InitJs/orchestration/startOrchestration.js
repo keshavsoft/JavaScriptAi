@@ -34,6 +34,6 @@ export async function startOrchestration(uri, extensionPath) {
         finalize({ folderPath }); log('DONE');
     } catch (error) {
         log('ERROR');
-        return;
+        fail(error);
     }
 };
