@@ -51,3 +51,7 @@ All notable changes to this extension are documented here.
 ## [1.2.7]
 
 ### ✅ with ui perfect for ordermanV5
+
+## [1.11.1]
+
+### ✅ Fetch calls perfect as sibling to addlisteners
