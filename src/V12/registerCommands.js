@@ -1,0 +1,16 @@
+import * as vscode from 'vscode';
+import { initCommand } from './commands/initCommand.js';
+import { listenersCommand } from './commands/listenersCommand.js';
+import { fetchCallsCommand } from './commands/fetchCallsCommand.js';
+import { businessCommand } from './commands/businessCommand.js';
+import { fetchFromServerCommand } from './commands/fetchFromServer.js';
+
+export function registerAllCommands(context) {
+    const init = vscode.commands.registerCommand('extension.initJs', initCommand(context));
+    const listeners = vscode.commands.registerCommand('extension.addListeners', listenersCommand(context));
+    const fetchCalls = vscode.commands.registerCommand('extension.FetchCalls', fetchCallsCommand(context));
+    const business = vscode.commands.registerCommand('extension.addBusiness', businessCommand(context));
+    const fetchFromServer = vscode.commands.registerCommand('extension.fetchFromServer', fetchFromServerCommand(context));
+
+    context.subscriptions.push(init, listeners, fetchCalls, business, fetchFromServer);
+};

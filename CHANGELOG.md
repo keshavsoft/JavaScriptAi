@@ -55,3 +55,7 @@ All notable changes to this extension are documented here.
 ## [1.11.1]
 
 ### ✅ Fetch calls perfect as sibling to addlisteners
+
+## [1.12.1]
+
+### ✅ FetchAsGet perfect
