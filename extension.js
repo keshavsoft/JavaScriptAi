@@ -1,5 +1,4 @@
-import * as vscode from 'vscode';
-import { registerAllCommands } from './src/V13/registerCommands.js';
+import { registerAllCommands } from './src/V14/registerCommands.js';
 
 export function activate(context) {
 	registerAllCommands(context);

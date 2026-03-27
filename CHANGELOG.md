@@ -63,3 +63,7 @@ All notable changes to this extension are documented here.
 ## [1.13.1]
 
 ### ✅ FetchAsGet as fetchCommand from user
+
+## [1.14.1]
+
+### ✅ explorer commands started
