@@ -75,3 +75,7 @@ All notable changes to this extension are documented here.
 ## [1.16.1]
 
 ### ✅ HtmlId perfect
+
+## [1.17.1]
+
+### ✅ fetchCalls to new place
