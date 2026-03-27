@@ -71,3 +71,7 @@ All notable changes to this extension are documented here.
 ## [1.15.1]
 
 ### ✅ addlisteners perfect
+
+## [1.16.1]
+
+### ✅ HtmlId perfect

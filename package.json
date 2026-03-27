@@ -3,7 +3,7 @@
   "displayName": "JavaScriptAi",
   "publisher": "KeshavSoft",
   "description": "KeshavSoft AI with voice capture",
-  "version": "1.15.1",
+  "version": "1.16.1",
   "type": "module",
   "capabilities": {
     "untrustedWorkspaces": {
@@ -35,6 +35,10 @@
       {
         "command": "extension.addListeners",
         "title": "Initiate addListeners"
+      },
+      {
+        "command": "extension.addHtmlId",
+        "title": "Initiate addHtmlId"
       },
       {
         "command": "extension.addBusiness",
@@ -71,9 +75,14 @@
           "group": "navigation@3"
         },
         {
+          "command": "extension.addHtmlId",
+          "when": "resourceExtname == .js",
+          "group": "navigation@4"
+        },
+        {
           "command": "extension.addBusiness",
           "when": "resourceExtname == .html",
-          "group": "navigation@4"
+          "group": "navigation@5"
         },
         {
           "command": "extension.FetchCalls",
