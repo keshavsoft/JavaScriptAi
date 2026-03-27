@@ -79,3 +79,7 @@ All notable changes to this extension are documented here.
 ## [1.17.1]
 
 ### ✅ fetchCalls to new place
+
+## [1.18.1]
+
+### ✅ editor/title perfect

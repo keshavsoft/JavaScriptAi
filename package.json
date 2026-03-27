@@ -3,7 +3,7 @@
   "displayName": "JavaScriptAi",
   "publisher": "KeshavSoft",
   "description": "KeshavSoft AI with voice capture",
-  "version": "1.17.1",
+  "version": "1.18.1",
   "type": "module",
   "capabilities": {
     "untrustedWorkspaces": {
@@ -25,20 +25,16 @@
   "contributes": {
     "commands": [
       {
-        "command": "extension.build",
-        "title": "Build"
-      },
-      {
         "command": "extension.initJs",
         "title": "Initiate JS"
       },
       {
         "command": "extension.addListeners",
-        "title": "Initiate addListeners"
+        "title": "AddListeners"
       },
       {
         "command": "extension.addHtmlId",
-        "title": "Initiate addHtmlId"
+        "title": "AddHtmlId"
       },
       {
         "command": "extension.addBusiness",
@@ -46,7 +42,11 @@
       },
       {
         "command": "extension.FetchCalls",
-        "title": "Initiate FetchCalls"
+        "title": "FetchCalls"
+      },
+      {
+        "command": "extension.FetchAsGet",
+        "title": "FetchAsGet"
       },
       {
         "command": "extension.fetchFromServer",
@@ -60,44 +60,56 @@
     "menus": {
       "explorer/context": [
         {
-          "command": "extension.build",
-          "when": "explorerResourceIsFolder",
-          "group": "navigation@1"
-        },
-        {
           "command": "extension.initJs",
           "when": "resourceExtname == .html",
-          "group": "navigation@2"
+          "group": "anavigation-a@1"
         },
         {
           "command": "extension.addListeners",
           "when": "resourceExtname == .js",
-          "group": "navigation@3"
-        },
-        {
-          "command": "extension.addHtmlId",
-          "when": "resourceExtname == .js",
-          "group": "navigation@4"
-        },
-        {
-          "command": "extension.addBusiness",
-          "when": "resourceExtname == .html",
-          "group": "navigation@5"
+          "group": "navigation-a@2"
         },
         {
           "command": "extension.FetchCalls",
           "when": "resourceExtname == .js",
-          "group": "navigation@5"
+          "group": "navigation-a@3"
         },
         {
-          "command": "extension.fetchFromServer",
-          "when": "resourceExtname == .html",
-          "group": "navigation@6"
+          "command": "extension.addHtmlId",
+          "when": "resourceExtname == .js",
+          "group": "navigation-a@4"
         },
         {
-          "command": "extension.fetchCommand",
+          "command": "extension.FetchAsGet",
+          "when": "resourceExtname == .js",
+          "group": "navigation-a@5"
+        }
+      ],
+      "editor/title": [
+        {
+          "command": "extension.initJs",
           "when": "resourceExtname == .html",
-          "group": "navigation@7"
+          "group": "navigation"
+        },
+        {
+          "command": "extension.addListeners",
+          "when": "resourceFilename == runAfterDomLoad.js",
+          "group": "navigation"
+        },
+        {
+          "command": "extension.FetchCalls",
+          "when": "resourceFilename == runAfterDomLoad.js",
+          "group": "navigation"
+        },
+        {
+          "command": "extension.addHtmlId",
+          "when": "resourceFilename == start.js",
+          "group": "navigation"
+        },
+        {
+          "command": "extension.FetchAsGet",
+          "when": "resourceFilename == clickFunc.js",
+          "group": "navigation"
         }
       ]
     }
