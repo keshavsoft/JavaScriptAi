@@ -67,3 +67,7 @@ All notable changes to this extension are documented here.
 ## [1.14.1]
 
 ### ✅ explorer commands started
+
+## [1.15.1]
+
+### ✅ addlisteners perfect

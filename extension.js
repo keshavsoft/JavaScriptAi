@@ -1,4 +1,4 @@
-import { registerAllCommands } from './src/V14/registerCommands.js';
+import { registerAllCommands } from './src/V15/registerCommands.js';
 
 export function activate(context) {
 	registerAllCommands(context);
