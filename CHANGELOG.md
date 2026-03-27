@@ -83,3 +83,7 @@ All notable changes to this extension are documented here.
 ## [1.18.1]
 
 ### ✅ editor/title perfect
+
+## [1.19.1]
+
+### ✅ htmlid click good
