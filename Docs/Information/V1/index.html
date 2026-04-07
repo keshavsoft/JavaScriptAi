@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScriptAI VS Code Extension</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1> JavaScriptAI VS Code Extension </h1>
+
+        <div class="card">
+
+            <h2>Overview</h2>
+
+            <p>
+                <b>JavaScriptAI </b> is a Visual Studio Code extension developed by <b>KeshavSoft</b>
+                focused on AI-assisted server-side and User-side development using Node.js and Express.
+            </p>
+
+            <div class="badge">Version 1.8.1</div>
+            <div class="badge">VS Code ^1.109.0</div>
+            <div class="badge">ES Modules</div>
+            <div class="badge">Untrusted Workspace Supported</div>
+
+
+        </div>
+
+        <div class="card">
+            <h2>GitHub Repository</h2>
+
+            <p>
+                <b>JavaScriptAI </b> helps automate JavaScript setup, event listener creation, and business logic
+                injection directly from the Explorer context menu
+            </p>
+
+            <p>Users can easily copy the GitHub repository link or open it directly.
+                This helps them quickly access the project, view source code, and share the link with others without
+                searching manually.</p>
+            <div class="code-container">
+
+                <pre><code id="repoCode">https://github.com/keshavsoft/JavaScriptAi</code></pre>
+
+                <button class="copy-btn" onclick="copyCode()">Copy</button>
+
+                <a href="https://github.com/keshavsoft/JavaScriptAi" target="_blank">
+                    <button class="open-btn">Open</button>
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <h2>Commands</h2>
+
+            <table>
+
+                <tr>
+                    <th>Command</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                </tr>
+
+                <tr>
+                    <td>extension.initJs</td>
+                    <td>Initiate Node API</td>
+                    <td>Creates base Express server</td>
+                </tr>
+
+                <tr>
+                    <td>extension.createEndpoint</td>
+                    <td>CreateEndpoint</td>
+                    <td>Creates GET / POST route in app.js</td>
+                </tr>
+
+                <tr>
+                    <td>extension.addSubRoute</td>
+                    <td>AddSubRoute</td>
+                    <td>Links router module in routes.js</td>
+                </tr>
+
+                <tr>
+                    <td>extension.addEndPoint</td>
+                    <td>AddEndPoint</td>
+                    <td>Adds endpoint logic to js file</td>
+                </tr>
+
+            </table>
+
+        </div>
+        <div class="card">
+
+            <h2>Editor Title Bar Actions</h2>
+
+            <p>
+                Quick access buttons in VS Code editor top-right corner.
+            </p>
+
+            <img src="./images/titlebar.png">
+
+            <div class="grid">
+
+                <div class="feature">
+
+                    <h3>Commends</h3>
+
+                    <ul>
+
+                        <li>Intial JS</li>
+
+                        <li>AddListeners</li>
+
+                        <li>FetchCalls</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <h2>Initiate JS</h2>
+
+            <p>
+                initial.js is usually used as a starting JavaScript file for a particular HTML page.
+                Its main purpose is to load scripts, initialize UI components, and run page-specific logic when that
+                HTML page opens.
+            </p>
+
+            <ul>
+
+                <li>Create a js file</li>
+
+            </ul>
+
+            <img src="./images/initJs.gif" alt="animation" width="200" height="600">
+
+        </div>
+
+        <div class="card">
+
+            <h2>AddListeners</h2>
+
+            <p>
+                initial.js is usually used as a starting JavaScript file for a particular HTML page.
+                Its main purpose is to load scripts, initialize UI components, and run page-specific logic when that
+                HTML page opens.
+            </p>
+
+            <ul>
+
+                <li>Create a js file</li>
+
+            </ul>
+
+            <img src="./images/AddListener.gif" alt="animation" width="200" height="600">
+
+        </div>
+
+        <div class="card">
+
+            <h2>FetchCalls</h2>
+
+            <p>
+                initial.js is usually used as a starting JavaScript file for a particular HTML page.
+                Its main purpose is to load scripts, initialize UI components, and run page-specific logic when that
+                HTML page opens.
+            </p>
+
+            <ul>
+
+                <li>Create a js file</li>
+
+            </ul>
+
+            <img src="./images/FetchCalls.gif" alt="animation" width="200" height="600">
+
+        </div>
+
+
+
+
+        <div class="card">
+
+            <h2>New Feature – Editor Title Bar Actions (Top Right Buttons)</h2>
+
+            <p>
+                EndPointGen also provides quick access buttons in the VS Code editor title bar (top-right corner).
+                These buttons allow you to create and manage endpoints without right-clicking in Explorer.
+            </p>
+
+
+            <h3>Available Title Bar Commands</h3>
+
+            <div class="grid">
+
+                <div class="feature">
+
+                    <h3>Intial JS</h3>
+
+                    <p>
+                        it create intial code particular html
+                    </p>
+
+                    <h4>Support</h4>
+
+                    <ul>
+                        <li>Click initiaJs button .it's create initial code </li>
+                    </ul>
+
+                </div>
+
+                <div class="feature">
+
+                    <h3>AddListeners</h3>
+
+                    <p>
+                        it create Addlistener code.
+                    </p>
+
+                    <h4>Support</h4>
+
+                    <ul>
+                        <li>Click addlistener button , it's create addlistener code</li>
+                    </ul>
+
+                </div>
+
+                <div class="feature">
+
+                    <h3>FetchCalls</h3>
+
+                    <p>
+                        Creates a new file for fetch.
+                    </p>
+
+                    <h4>Supports</h4>
+
+                    <ul>
+                        <li>automatic code generate</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <h2>Benefits</h2>
+
+            <ul>
+
+                <li> Faster development</li>
+
+                <li> Standard project structure</li>
+
+                <li> Less manual coding</li>
+
+                <li> Modular architecture</li>
+
+                <li> Clean Express setup</li>
+
+                <li> Works directly inside VS Code</li>
+
+            </ul>
+
+        </div>
+
+        <footer>
+
+            Made with ❤ by KeshavSoft
+
+        </footer>
+
+    </div>
+    <script>
+
+        function copyCode() {
+
+            const text =
+                document.getElementById("repoCode").innerText;
+
+            navigator.clipboard.writeText(text);
+
+            const btn =
+                document.querySelector(".copy-btn");
+
+            btn.innerText = "Copied ✓";
+
+            setTimeout(() => {
+                btn.innerText = "Copy";
+            }, 2000);
+
+        }
+
+    </script>
+
+</body>
+
+</html>
