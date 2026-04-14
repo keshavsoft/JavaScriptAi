@@ -1,5 +1,0 @@
-const hookAllListeners = () => {
-
-};
-
-export { hookAllListeners };

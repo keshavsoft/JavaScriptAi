@@ -45,6 +45,10 @@
         "title": "FetchCalls"
       },
       {
+        "command": "extension.formSearchParams",
+        "title": "FormSearchParams"
+      },
+      {
         "command": "extension.FetchAsGet",
         "title": "FetchAsGet"
       },
@@ -94,12 +98,17 @@
         {
           "command": "extension.addListeners",
           "when": "resourceFilename == runAfterDomLoad.js",
-          "group": "navigation"
+          "group": "navigation@1"
         },
         {
           "command": "extension.FetchCalls",
           "when": "resourceFilename == runAfterDomLoad.js",
-          "group": "navigation"
+          "group": "navigation@2"
+        },
+        {
+          "command": "extension.formSearchParams",
+          "when": "resourceFilename == runAfterDomLoad.js",
+          "group": "navigation@3"
         },
         {
           "command": "extension.addHtmlId",
