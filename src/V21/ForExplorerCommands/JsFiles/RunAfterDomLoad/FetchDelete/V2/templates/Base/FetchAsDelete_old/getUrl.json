@@ -1,0 +1,3 @@
+{
+    "deleteEndPoint": "/Api/ItemsTable/Delete"
+}

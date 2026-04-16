@@ -1,0 +1,5 @@
+const formSearchParamsFunc = () => {
+
+};
+
+export { formSearchParamsFunc };

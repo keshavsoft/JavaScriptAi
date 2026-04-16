@@ -49,6 +49,10 @@
         "title": "FormSearchParams"
       },
       {
+        "command": "extension.js.runAfterDomLoad.fetch.delete",
+        "title": "fetchDelete"
+      },
+      {
         "command": "extension.FetchAsGet",
         "title": "FetchAsGet"
       },
@@ -107,6 +111,11 @@
         },
         {
           "command": "extension.formSearchParams",
+          "when": "resourceFilename == runAfterDomLoad.js",
+          "group": "navigation@3"
+        },
+        {
+          "command": "extension.js.runAfterDomLoad.fetch.delete",
           "when": "resourceFilename == runAfterDomLoad.js",
           "group": "navigation@3"
         },
